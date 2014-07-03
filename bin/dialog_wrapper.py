@@ -107,10 +107,6 @@ class Dialog:
                 self.error("Password must be at least %s characters." % min_length)
                 continue
 
-            if not password:
-                self.error("Please enter non-empty password.")
-                continue
-
             if not re.match(pass_re, password):
                 self.error("Password does not match complexity requirements.")
                 continue
